@@ -1,10 +1,21 @@
 require "spec_helper"
 
 RSpec.describe P06 do
-  it "has a version number" do
-    expect(P06::VERSION).not_to be nil
-  end
-  before :all do
-    @alimento = Alimento.new
-  end
+
+	it "has a version number" do
+		expect(P06::VERSION).not_to be nil
+	end
+
+	before :all do
+		@leche = Alimento.new("leche vaca",3.3,4.8,3.2)
+		@yogurt = Alimento.new("yogurt",3.8,4.9,3.8)
+		@cerdo = Alimento.new("cerdo",21.5,0.0,6.3)
+		@ternera = Alimento.new("ternera",21.1,0.0,3.1)
+		@pollo = Alimento.new("pollo",20.6,0.0,5.6)
+	end
+
+	it "El alimento tiene un nombre" do
+		expect(@leche.nombre).to eq("leche vaca")
+	end
+
 end
