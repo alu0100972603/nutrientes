@@ -26,4 +26,8 @@ RSpec.describe P06 do
 		expect(@leche.proteinas.is_a?Numeric).to be(true)
 	end
 
+	it "El alimento tiene glucidos" do
+		expect(@leche.glucidos.is_a?Numeric).to be(true)
+	end
+
 end
