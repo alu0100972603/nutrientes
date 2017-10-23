@@ -18,6 +18,9 @@ RSpec.describe P06 do
 		@pollo = Alimento.new("pollo",20.6,0.0,5.6)
 	end
 
+	#Compruebo que existe un nombre, cantidad de proteina,glucidos y grasas.
+	#Para ello compruebo el tipo de variables que son, ya que asi compruebo que estan instanciados.
+
 	it "El alimento tiene un nombre" do
 		expect(@leche.nombre.is_a?String).to be(true)
 	end
@@ -28,6 +31,10 @@ RSpec.describe P06 do
 
 	it "El alimento tiene glucidos" do
 		expect(@leche.glucidos.is_a?Numeric).to be(true)
+	end
+
+	it "El alimento tiene grasas" do
+		expect(@leche.grasas.is_a?Numeric).to be(true)
 	end
 
 end
