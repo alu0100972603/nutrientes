@@ -42,6 +42,11 @@ RSpec.describe "Existencia de metodos que devuelven valor" do
 
 	before :all do
 		@leche = Alimento.new("leche vaca",3.3,4.8,3.2)
+		@yogurt = Alimento.new("yogurt",3.8,4.9,3.8)
+                @cerdo = Alimento.new("cerdo",21.5,0.0,6.3)
+                @ternera = Alimento.new("ternera",21.1,0.0,3.1)
+                @pollo = Alimento.new("pollo",20.6,0.0,5.6)
+
 	end
 
 	#Se van a cumplir todos porque ya, anteriormente creamos attr_reader para comprobar
@@ -67,6 +72,16 @@ RSpec.describe "Existencia de metodos que devuelven valor" do
 
 	it "Existe metodo para devolver alimento formateado" do
 		expect(@leche.respond_to?("formateado")).to be(true)
+	end
+
+	#Metodo que devuelve el valor energético
+	it "Existe metodo que devuelve el valor energetico alimento" do
+		expect(@leche.calorias).to eq(61.2)
+		expect(@yogurt.calorias).to eq(69)
+		expect(@cerdo.calorias).to eq(142.7)
+		expect(@ternera.calorias).to eq(112.30000000000001)
+		expect(@pollo.calorias).to eq(132.8)
+
 	end
 
 end

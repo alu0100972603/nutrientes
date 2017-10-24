@@ -7,6 +7,7 @@ class Alimento
 		@proteinas = proteinas
 		@glucidos = glucidos
 		@grasas = grasas
+		@cal
 	end
 
 	def to_s
@@ -18,5 +19,6 @@ class Alimento
 		print "Nombre: ",@nombre,"\t","Proteínas: ",@proteinas,"\t","Glúcidos: ",@glucidos,"\t","Grasas: ",@grasas
 		puts
 	end
+
 
 end
