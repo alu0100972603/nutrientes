@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe P06 do
+RSpec.describe "Existencia de datos" do
 
 	it "has a version number" do
 		expect(P06::VERSION).not_to be nil
@@ -36,5 +36,13 @@ RSpec.describe P06 do
 	it "El alimento tiene grasas" do
 		expect(@leche.grasas.is_a?Numeric).to be(true)
 	end
+end
+
+RSpec.describe "Existencia de metodos que devuelven valor" do
+
+	it "Existe metodo para devolver el nombre" do
+		expect(@leche.nombre).to be("leche vaca")
+	end
+
 
 end
