@@ -8,4 +8,15 @@ class Alimento
 		@glucidos = glucidos
 		@grasas = grasas
 	end
+
+	def to_s
+		print "El alimento ",@nombre," tiene ",@proteinas," gramos de proteínas, ",@glucidos," gramos de glúcidos y ",@grasas," gramos de grasas"
+		puts
+	end
+
+	def formateado
+		print "Nombre: ",@nombre,"\t","Proteínas: ",@proteinas,"\t","Glúcidos: ",@glucidos,"\t","Grasas: ",@grasas
+		puts
+	end
+
 end
