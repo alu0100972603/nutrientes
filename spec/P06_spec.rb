@@ -40,8 +40,12 @@ end
 
 RSpec.describe "Existencia de metodos que devuelven valor" do
 
+	before :all do
+		@leche = Alimento.new("leche vaca",3.3,4.8,3.2)
+	end
+
 	it "Existe metodo para devolver el nombre" do
-		expect(@leche.nombre).to be("leche vaca")
+		expect(@leche.nombre).to eq("leche vaca")
 	end
 
 
