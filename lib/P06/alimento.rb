@@ -20,5 +20,8 @@ class Alimento
 		puts
 	end
 
+	def calorias
+		@cal = (4*@proteinas)+(4*@glucidos)+(9*@grasas)
+	end
 
 end
