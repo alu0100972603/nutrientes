@@ -44,9 +44,25 @@ RSpec.describe "Existencia de metodos que devuelven valor" do
 		@leche = Alimento.new("leche vaca",3.3,4.8,3.2)
 	end
 
+	#Se van a cumplir todos porque ya, anteriormente creamos attr_reader para comprobar
+	#que el alimento tenia nombre, proteinas, glucidos y grasas
+
 	it "Existe metodo para devolver el nombre" do
 		expect(@leche.nombre).to eq("leche vaca")
 	end
+
+	it "Existe metodo para devolver cantidad proteinas" do
+		expect(@leche.proteinas).to eq(3.3)
+	end
+
+	it "Existe metodo para devolver cantidad glucidos" do
+                expect(@leche.glucidos).to eq(4.8)
+        end
+
+	it "Existe metodo para devolver cantidad grasas" do
+                expect(@leche.grasas).to eq(3.2)
+        end
+
 
 
 end
