@@ -63,6 +63,10 @@ RSpec.describe "Existencia de metodos que devuelven valor" do
                 expect(@leche.grasas).to eq(3.2)
         end
 
+	#Existe metodo que devuelva el alimento formateado
 
+	it "Existe metodo para devolver alimento formateado" do
+		expect(@leche.respond_to?("formateado")).to be(true)
+	end
 
 end
