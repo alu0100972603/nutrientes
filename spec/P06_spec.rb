@@ -1,11 +1,5 @@
 require "spec_helper"
 
-<<<<<<< HEAD
-RSpec.describe P06 do
-  it "has a version number" do
-    expect(P06::VERSION).not_to be nil
-  end
-=======
 RSpec.describe "Existencia de datos" do
 
 	it "has a version number" do
@@ -89,6 +83,19 @@ RSpec.describe "Existencia de metodos que devuelven valor" do
 		expect(@pollo.calorias).to eq(132.8)
 
 	end
->>>>>>> desarrollo
+
+end
+
+#Practica 7
+
+RSpec.describe "Existencia de elementos" do
+
+	before :all do
+		@lista = List.new()
+	end
+
+	it "Existe un nodo de la lista" do
+		expect(@lista.nodo.is_a?Class).to be(true)
+	end
 
 end
