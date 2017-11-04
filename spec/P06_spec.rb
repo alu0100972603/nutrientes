@@ -95,7 +95,7 @@ RSpec.describe "Existencia de elementos" do
 	end
 
 	it "Existe un nodo de la lista" do
-		expect(@lista.nodo.is_a?Class).to be(true)
+		expect(Nodo.is_a?Class).to be(true)
 	end
 
 end
