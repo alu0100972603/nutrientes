@@ -85,17 +85,3 @@ RSpec.describe "Existencia de metodos que devuelven valor" do
 	end
 
 end
-
-#Practica 7
-
-RSpec.describe "Existencia de elementos" do
-
-	before :all do
-		@lista = List.new()
-	end
-
-	it "Existe un nodo de la lista" do
-		expect(Nodo.is_a?Class).to be(true)
-	end
-
-end
