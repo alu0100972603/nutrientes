@@ -23,4 +23,14 @@ RSpec.describe "Existencia de datos" do
 
 	end
 
+	it "Debe existir una lista con su cabeza y su cola" do
+		@lista.push_head(@alimento1)
+                @lista.push_head(@alimento2)
+                @lista.push_head(@alimento3)
+
+
+		expect(@lista.head.value).to eq(@alimento3)
+		expect(@lista.tail.value).to eq(@alimento1)
+	end
+
 end
