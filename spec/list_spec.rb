@@ -55,4 +55,9 @@ RSpec.describe "Insercion de valores" do
 		expect(@lista.size).to eq(3)
 	end
 
+	it "Insercion de varios elementos en la lista" do
+		@lista.push_others([@alimento1,@alimento2,@alimento3])
+		expect(@lista.size).to eq(3)
+	end
+
 end
