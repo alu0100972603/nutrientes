@@ -77,4 +77,10 @@ class List
 	return size
     end
 
+    def push_others(values)
+        for i in (0..values.size-1)
+	        push_head(values[i])
+        end
+    end
+
 end
