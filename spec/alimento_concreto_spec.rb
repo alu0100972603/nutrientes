@@ -16,10 +16,15 @@ RSpec.describe "Existencia de datos" do
 
 	it "Es un objeto de Alimento concreto" do
 		expect(@alimento1.is_a?Alimento_concreto).to be(true)
-                expect(@alimento1.is_a?Alimento_concreto).to be(true)
-                expect(@alimento1.is_a?Alimento_concreto).to be(true)
+                expect(@alimento2.is_a?Alimento_concreto).to be(true)
+                expect(@alimento3.is_a?Alimento_concreto).to be(true)
 	end
 
-	
+	it "Es una clase hija de Alimento" do
+		expect(@alimento1.is_a?Alimento).to be(true)
+                expect(@alimento2.is_a?Alimento).to be(true)
+                expect(@alimento3.is_a?Alimento).to be(true)
+	end
+
 
 end
