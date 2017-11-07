@@ -102,4 +102,22 @@ class List
         return extraido
     end
 
+    def pop_head
+        extraido = false
+        if @head == nil   #Comprobamos si la lista no esta vacía
+			raise RuntimeError, "Lista vacía, no se puede extraer nodo"
+		else
+		    extraido = true
+			if @head == @tail
+				@head = nil
+				@tail = nil
+			else
+				@head = @head.prev
+                @head.next = nil
+			end
+        end
+        
+        return extraido
+    end
+
 end
