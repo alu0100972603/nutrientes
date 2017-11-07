@@ -1,5 +1,6 @@
 class Alimento_concreto < Alimento
 
+    attr_accessor :grupo
     
     def initialize (grupo,nombre,proteinas,glucidos,grasas)
         super(nombre,proteinas,glucidos,grasas)
