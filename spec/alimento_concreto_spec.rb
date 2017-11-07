@@ -26,5 +26,10 @@ RSpec.describe "Existencia de datos" do
                 expect(@alimento3.is_a?Alimento).to be(true)
 	end
 
+	it "Alimento concreto pertenece a un grupo" do
+		expect(@alimento1.respond_to?("grupo")).to be(true)
+                expect(@alimento2.respond_to?("grupo")).to be(true)
+                expect(@alimento3.respond_to?("grupo")).to be(true)
+	end
 
 end
