@@ -34,3 +34,25 @@ RSpec.describe "Existencia de datos" do
 	end
 
 end
+
+RSpec.describe "Insercion de valores" do
+
+        before :each do
+
+                @alimento1=Alimento_concreto.new("Huevos,lacteos y helados","Huevo",14.1,0.0,19.5)
+                @alimento2=Alimento_concreto.new("Huevos,lacteos y helados","Leche_vaca",3.3,4.8,3.2)
+                @alimento3=Alimento_concreto.new("Huevos,lacteos y helados","Yogurt",3.8,4.9,3.8)
+
+                @lista=List.new()
+        end
+
+
+	it "Insercion de un elemento en la lista" do
+		@lista.push_head(@alimento1)
+		expect(@lista.size).to eq(1)
+		@lista.push_head(@alimento2)
+		@lista.push_head(@alimento3)
+		expect(@lista.size).to eq(3)
+	end
+
+end
