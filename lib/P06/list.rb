@@ -67,4 +67,14 @@ class List
         @valor
     end
 
+    def size
+	size = 0
+	i = @tail
+	while i != nil
+		i = i.next
+		size+=1
+	end
+	return size
+    end
+
 end
