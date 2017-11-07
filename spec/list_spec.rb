@@ -80,4 +80,8 @@ RSpec.describe "Extraccion de elementos" do
 
 
 
+	it "Extraccion del ultimo elemento de la lista" do
+                @lista.push_others([@alimento1,@alimento2,@alimento3])
+                expect(@lista.pop_head).to be(true)
+        end
 end
