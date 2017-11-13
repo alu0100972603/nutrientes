@@ -15,5 +15,13 @@ RSpec.describe "Enumerable" do
                 expect(@lista.count).to eq(3)
         end
 
+	it "Comprobando el metodo all? con un bloque vacio" do
+		@lista.push_others([@huevo,@leche,@yogurt])
+		@lista2=List.new()
+		@lista2.push_head(nil)
+		expect(@lista.all?).to be(true)
+		expect(@lista2.all?).to be(false)
+	end
+
 end
 
