@@ -12,4 +12,8 @@ RSpec.describe "Comparable" do
 		expect(@leche<@huevo).to be(true)
 	end
 
+	it "Comprobando que calorias de yogurt es mayor que calorias de leche" do
+		expect(@yogurt>@leche).to be(true)
+	end
+
 end
