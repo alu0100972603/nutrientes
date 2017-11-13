@@ -2,7 +2,7 @@ Nodo = Struct.new(:value, :next, :prev)
 
 class List
 
-   attr_accessor :head, :tail
+    attr_accessor :head, :tail
    
     def initialize
        @head = nil
