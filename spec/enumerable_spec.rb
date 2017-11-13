@@ -31,5 +31,11 @@ RSpec.describe "Enumerable" do
 		expect(@lista2.any?).to be(false)
 	end
 
+	it "Comprobando el metodo detect" do
+		@lista.push_others([@huevo,@leche,@yogurt])
+		expect(@lista.detect{|i| i==@leche}).to eq(@leche)
+		expect(@lista.find{|i| i==@yogurt}).to eq(@yogurt)
+	end
+
 end
 
