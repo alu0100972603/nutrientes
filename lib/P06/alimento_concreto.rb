@@ -1,10 +1,16 @@
 class Alimento_concreto < Alimento
 
+    include Comparable
+
     attr_accessor :grupo
     
     def initialize (grupo,nombre,proteinas,glucidos,grasas)
         super(nombre,proteinas,glucidos,grasas)
         @grupo = grupo
+    end
+
+    def <=>(another)
+	calorias <=> another.calorias
     end
 
     def to_s
