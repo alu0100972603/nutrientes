@@ -2,6 +2,7 @@ Nodo = Struct.new(:value, :next, :prev)
 
 class List
 
+    include Enumerable
     attr_accessor :head, :tail
    
     def initialize
@@ -118,6 +119,14 @@ class List
         end
         
         return extraido
+    end
+
+    def each
+	i = @tail
+	while i != nil
+	    yield i.value
+	    i = i.next
+	end
     end
 
 end
