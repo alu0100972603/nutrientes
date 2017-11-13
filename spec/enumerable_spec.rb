@@ -23,5 +23,13 @@ RSpec.describe "Enumerable" do
 		expect(@lista2.all?).to be(false)
 	end
 
+	it "Comprobando el metodo any?" do
+		@lista.push_others([@huevo,@leche,@yogurt,nil])
+		@lista2=List.new()
+		@lista2.push_head(nil)
+		expect(@lista.any?).to be(true)
+		expect(@lista2.any?).to be(false)
+	end
+
 end
 
