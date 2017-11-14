@@ -54,6 +54,15 @@ RSpec.describe "Enumerable" do
 		expect(@lista.sort == @lista2)
 	end
 
+        it "Comprobando el metodo collect" do
+                @lista.push_others([@huevo,@leche,@yogurt])
+                @lista2=List.new()
+                @lista2.push_others([@huevo,@huevo,@huevo])
+		@lista.collect{|i| @huevo}
+                expect(@lista == @lista2)
+        end
+
+
 
 end
 
