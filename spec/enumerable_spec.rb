@@ -47,6 +47,13 @@ RSpec.describe "Enumerable" do
                 expect(@lista.max).to eq(@huevo)
         end
 
+	it "Comprobando el metodo sort" do
+		@lista.push_others([@huevo,@leche,@yogurt])
+                @lista2=List.new()
+		@lista2.push_others([@leche,@yogurt,@huevo])
+		expect(@lista.sort == @lista2)
+	end
+
 
 end
 
