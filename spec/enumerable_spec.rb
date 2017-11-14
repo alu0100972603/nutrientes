@@ -42,5 +42,11 @@ RSpec.describe "Enumerable" do
 		expect(@lista.min).to eq(@leche)
 	end
 
+        it "Comprobando el metodo max" do
+                @lista.push_others([@huevo,@leche,@yogurt])
+                expect(@lista.max).to eq(@huevo)
+        end
+
+
 end
 
