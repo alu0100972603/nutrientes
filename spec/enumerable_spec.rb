@@ -37,5 +37,10 @@ RSpec.describe "Enumerable" do
 		expect(@lista.find{|i| i==@yogurt}).to eq(@yogurt)
 	end
 
+	it "Comprobando el metodo min" do
+		@lista.push_others([@huevo,@leche,@yogurt])
+		expect(@lista.min).to eq(@leche)
+	end
+
 end
 
