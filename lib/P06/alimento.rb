@@ -38,10 +38,15 @@ class Alimento
 		@cal = (4*@proteinas)+(4*@glucidos)+(9*@grasas)
 	end
 
+	# Este metodo lo que hace es devolverme el valor correspondiente
+	# dependiendo de la posicion en la que me encuentre en el vector,
+	# esto lo hago para que no me acceda a la posicion -1.
 	def neg(pos,gluc)
 		pos < 0 ? gluc[0] : gluc[pos]
 	end
 
+	# Este metodo me calcula el AIBC. Se ha aplicado la programacion
+	# funcional.
 	def AIBC
 		@individuos.map{|i| g=i.first; pos=-1; i.map{|j| prev=neg(pos,i); pos=pos+1; (((j-g)+(prev-g))*2.5)}.reduce(:+).round(2)}
 	end
