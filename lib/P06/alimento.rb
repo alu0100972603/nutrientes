@@ -10,12 +10,13 @@ class Alimento
 
 	# Se asigna el nombre del alimento, las proteinas, 
 	# los glucidos y las grasas.
-	def initialize(nombre,proteinas,glucidos,grasas)
+	def initialize(nombre,proteinas,glucidos,grasas,individuos)
 		@nombre = nombre
 		@proteinas = proteinas
 		@glucidos = glucidos
 		@grasas = grasas
 		@cal
+		@individuos = individuos
 	end
 
 	# Este es el metodo to_s que muestra al alimento por pantalla.
@@ -35,6 +36,14 @@ class Alimento
 	# del alimento.
 	def calorias
 		@cal = (4*@proteinas)+(4*@glucidos)+(9*@grasas)
+	end
+
+	def neg(pos,gluc)
+		pos < 0 ? gluc[0] : gluc[pos]
+	end
+
+	def AIBC
+		@individuos.map{|i| g=i.first; pos=-1; i.map{|j| prev=neg(pos,i); pos=pos+1; (((j-g)+(prev-g))*2.5)}.reduce(:+).round(2)}
 	end
 
 end
