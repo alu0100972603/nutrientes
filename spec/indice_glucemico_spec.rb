@@ -22,4 +22,9 @@ RSpec.describe "Existencia de datos" do
 		expect(@glucosa.respond_to?("AIBC")).to be(true)
 	end
 
+	it "El valor del IG es correcto" do
+		expect(@IG_yogurt).to eq(41.38)
+		expect(@IG_chocolate).to eq(13.33)
+	end
+
 end
