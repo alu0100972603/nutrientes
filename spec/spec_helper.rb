@@ -1,6 +1,6 @@
 require "bundler/setup"
 require "P06"
-require ’coveralls’
+require 'coveralls'
 Coveralls.wear!
 
 
