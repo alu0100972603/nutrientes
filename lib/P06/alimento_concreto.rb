@@ -11,7 +11,7 @@ class Alimento_concreto < Alimento
     # Se asigna el grupo del alimento y los otros datos del
     # alimento se le pasa al initialize de Alimento
     def initialize (grupo,nombre,proteinas,glucidos,grasas)
-        super(nombre,proteinas,glucidos,grasas)
+        super(nombre,proteinas,glucidos,grasas,[])
         @grupo = grupo
     end
 
