@@ -48,4 +48,9 @@ RSpec.describe "Ordenacion de array de alimento" do
                 expect(@alimento.respond_to?("sort")).to be(true)
         end
 
+	it "Los metodos de ordenacion funcionan" do
+		expect(@alimento.sort).to eq(@ordenado)
+		expect(@alimento.ordenar_for).to eq(@ordenado)
+		expect(@alimento.ordenar_each).to eq(@ordenado)
+	end
 end
