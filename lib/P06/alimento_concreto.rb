@@ -28,3 +28,22 @@ class Alimento_concreto < Alimento
     end
     
 end
+
+class Array
+    
+    def ordenar_for
+        
+        @vector=self
+        
+        for i in (0..@vector.size-1)
+            for j in (0..@vector.size-1)
+                if j+1 != @vector.size
+                    if @vector[j+1] < @vector[j]
+                        @vector[j], @vector[j+1] = @vector[j+1], @vector[j]
+                    end
+                end
+            end
+        end
+        @vector
+    end
+end
