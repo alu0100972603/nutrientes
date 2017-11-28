@@ -44,4 +44,8 @@ RSpec.describe "Ordenacion de array de alimento" do
 		expect(@alimento.respond_to?("ordenar_each")).to be(true)
 	end
 
+        it "Existe metodo de ordenacion sort" do
+                expect(@alimento.respond_to?("sort")).to be(true)
+        end
+
 end
