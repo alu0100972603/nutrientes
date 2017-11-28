@@ -29,8 +29,12 @@ class Alimento_concreto < Alimento
     
 end
 
+# Aqui abro la clase array y creo los metodos de ordenacion
+# for y each. El sort ya lo tiene la clase
 class Array
     
+    # Este es el metodo de ordenacio for. Utilizo el
+    # metodo burbuja.
     def ordenar_for
         
         @vector=self
@@ -47,6 +51,7 @@ class Array
         @vector
     end
 
+    #Este es el metodo de ordenacion each.
     def ordenar_each
         
         @ordenado= []
