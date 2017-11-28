@@ -2,6 +2,7 @@ require "P06/version"
 require "P06/alimento"
 require "P06/list"
 require "P06/alimento_concreto"
+require 'benchmark'
 
 
 # encoding: utf-8

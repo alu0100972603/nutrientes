@@ -53,4 +53,12 @@ RSpec.describe "Ordenacion de array de alimento" do
 		expect(@alimento.ordenar_for).to eq(@ordenado)
 		expect(@alimento.ordenar_each).to eq(@ordenado)
 	end
+
+	it "Benchmark de los metodos de ordenacion" do
+		Benchmark.bmbm do |x|
+			x.report("for") { @alimento.dup.ordenar_for }
+			x.report("each") { @alimento.dup.ordenar_each }
+			x.report("sort") { @alimento.dup.sort }
+		end
+	end
 end
