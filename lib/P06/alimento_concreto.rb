@@ -46,4 +46,14 @@ class Array
         end
         @vector
     end
+
+    def ordenar_each
+        
+        @ordenado= []
+        aux_self=self.clone
+        
+        (0..self.size-1).each{|i| min=aux_self.min; @ordenado << min; aux_self.delete(min)}
+        
+        @ordenado
+    end
 end
