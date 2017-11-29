@@ -1,7 +1,8 @@
-require "bundler/setup"
-require "P06"
 require 'coveralls'
 Coveralls.wear!
+
+require "bundler/setup"
+require "P06"
 
 
 RSpec.configure do |config|
