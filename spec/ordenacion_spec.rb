@@ -55,10 +55,13 @@ RSpec.describe "Ordenacion de array de alimento" do
 	end
 
 	it "Benchmark de los metodos de ordenacion" do
+
+		n=2000		
+
 		Benchmark.bmbm do |x|
-			x.report("for") { @alimento.dup.ordenar_for }
-			x.report("each") { @alimento.dup.ordenar_each }
-			x.report("sort") { @alimento.dup.sort }
+			x.report("for") { n.times{@alimento.dup.ordenar_for} }
+			x.report("each") { n.times{@alimento.dup.ordenar_each} }
+			x.report("sort") { n.times{@alimento.dup.sort} }
 		end
 	end
 end
